@@ -1,0 +1,60 @@
+<!--<table border="3">
+    <tr>
+<td>Id</td>
+<td>name</td>
+<td>adress</td>
+<td>image</td>
+<td>Status</td>
+    </tr>
+    <tr *ngFor="let i of listResidences">
+<td>{{i.id}}</td>
+<td>{{i.name}}</td>
+<td>{{i.address}}</td>
+<td><img [src]="i.image" alt="img" width="100" height="100"></td>
+<td>{{i.status}}</td>
+
+    </tr>
+
+</table>
+<br>
+<hr>
+<br>
+<input type="text" [(ngModel)]="search">
+<div *ngFor="let s of listResidences">
+    <div *ngIf="search == s.name">
+        <ul>
+            <li>
+                {{s.id}}
+                    </li>
+              <li>
+                {{s.name}}
+                    </li>
+</ul>
+</div>
+</div>-->
+
+<input type="text" [(ngModel)]="search" />
+<div class="row">
+  <div *ngFor="let i of searchbyname()" class="card m-3" style="width: 18rem">
+    <img [src]="i.image" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ i.name }}</h5>
+      <h5 class="card-title">{{ i.status }}</h5>
+      <p class="card-text">{{ i.address }}</p>
+
+      <a href="#" class="btn btn-primary" (click)="showalertinconnu(i)"
+        >Show location</a
+      >
+
+      <button class="btn btn-success" (click)="addlistfavoris(i)">
+        {{ isverif(i) ? "j'aime pas" : "j'aime" }}
+      </button>
+      <button class="btn btn-danger" (click)="deleteResidence(i.id)">Delete</button>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<button (click)="shownumber()">show number</button>
+<div *ngIf="num != null">le nombre est : {{ num }}</div>
