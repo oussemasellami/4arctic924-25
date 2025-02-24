@@ -31,8 +31,8 @@ return n
   updateResidence(res:Residence,id:any):Observable<Residence[]>{
     return this.http.put<Residence[]>(this.UrlResidence+'/'+id,res)
   }
-  getResidence(id:any):Observable<Residence[]>{
-    return this.http.get<Residence[]>(this.UrlResidence+'/'+id)
+  getResidence(id:any):Observable<Residence>{
+    return this.http.get<Residence>(this.UrlResidence+'/'+id)
   }
   deleteResidence(id:any):Observable<Residence[]>{
     return this.http.delete<Residence[]>(this.UrlResidence+'/'+id)

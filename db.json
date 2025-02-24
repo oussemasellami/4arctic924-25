@@ -6,6 +6,20 @@
       "address": "Borj Cedria",
       "image": "../../assets/images/residence1.jpg",
       "status": "Disponible"
+    },
+    {
+      "id": "12",
+      "name": "Ali",
+      "address": "1 rue",
+      "image": "../../assets/images/residence1.jpg",
+      "status": "disponible"
+    },
+    {
+      "id": "13",
+      "name": "Ahmed",
+      "address": "8rue",
+      "image": "../../assets/images/residence1.jpg",
+      "status": "disponible"
     }
   ]
 }

@@ -15,7 +15,9 @@ import { ListannonceComponent } from './annonce/listannonce/listannonce.componen
 import { AnnonceRoutingModule } from './annonce/annonce-routing.module';
 import { AnnonceModule } from './annonce/annonce.module';
 import { FormResidenceComponent } from './form-residence/form-residence.component'
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { DetailsComponent } from './details/details.component';
+import { UpdateComponent } from './update/update.component'
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import {HttpClientModule} from '@angular/common/http'
     ResidenceComponent,
     NotfoundComponent,
     FormResidenceComponent,
+    DetailsComponent,
+    UpdateComponent,
   
   
   ],

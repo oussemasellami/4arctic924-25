@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ResidenceService } from '../service/residence.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-form-residence',
@@ -10,6 +13,10 @@ export class FormResidenceComponent implements OnInit{
  
 
   formR!:FormGroup
+
+  constructor(private resservice:ResidenceService,private router:Router){
+
+  }
 
   ngOnInit(): void {
 
@@ -40,7 +47,13 @@ this.formR=new FormGroup({
   }
 
   add(){
-    console.log('my form : '+JSON.stringify(this.formR.value))
+   // console.log('my form : '+JSON.stringify(this.formR.value))
+
+   this.resservice.addResidence
+   (this.formR.value).subscribe(()=>{
+console.log("added!!!!!")
+this.router.navigate(['/residence'])
+   })
   }
 
 }

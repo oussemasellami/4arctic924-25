@@ -50,6 +50,8 @@
         {{ isverif(i) ? "j'aime pas" : "j'aime" }}
       </button>
       <button class="btn btn-danger" (click)="deleteResidence(i.id)">Delete</button>
+      <button class="btn btn-success" [routerLink]="['/detailsresidence',i.id]" >Show details</button>
+      <button class="btn btn-dark" [routerLink]="['/update',i.id]" >Update</button>
     </div>
   </div>
 </div>
